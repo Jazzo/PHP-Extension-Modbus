@@ -3,8 +3,8 @@
 Master functions
 
 ## modbus_open
-modbus_open(string *$port*, int *$baud_rate*, char *$parity*, int *$bit_stop*, int *$time_out*);<br> 
-return _PORT_ reference
+modbus_open(string *$port*, int *$baud_rate*, char *$parity*, int *$bit_stop*, int *$time_out*);<br>
+return __PORT__ reference<br>
 _example_: $port = modbus_open("/dev/ttyUSB0", 38400, "N", 2, 50);
 
 ## modbus_close
