@@ -4,6 +4,7 @@ Master functions
 
 ## modbus_open
 modbus_open(string *$port*, int *$baud_rate*, char *$parity*, int *$bit_stop*, int *$time_out*);<br> 
+return _PORT_ reference
 _example_: $port = modbus_open("/dev/ttyUSB0", 38400, "N", 2, 50);
 
 ## modbus_close
@@ -21,7 +22,7 @@ _example_:<br>
 $v = modbus_read_holding_registers($port, 28, 215, 4); // _read registers: 215, 216, 217 and 218_
 
 ## modbus_read_input_registers
-_use_ : $v = modbus_read_input_registers(ref $port, int $id_slave, int $Register, int $nRead);<br>
+_use_ : $v = modbus_read_input_registers(ref *$port*, int *$id_slave*, int *$register*, int *$n_read*);<br>
 _read above_
 
 ## modbus_write
